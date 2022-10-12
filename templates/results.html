@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="spacer1"></div>
+    <div class="container d-flex flex-column border border-dark w-25 pt-3 pb-3 bg-secondary">
+        <h1 class="align-self-center mb-4 text-warning">SUBMITTED INFO</h1>
+            <div class="d-flex justify-content-evenly align-items-center mb-3">
+                <h2 class="text-warning">First Name: </h2>
+                <p>{{ session['f_name'] }}</p>
+            </div>
+            <div class="d-flex justify-content-evenly align-items-center mb-3">
+                <h2 class="text-warning">Last Name: </h2>
+                <p>{{ session['l_name'] }}</p>
+            </div>
+            <div class="d-flex justify-content-evenly align-items-center mb-3">
+                <h2 class="text-warning me-5">Age: </h2>
+                <p class="ms-5">{{ session['age'] }}</p>
+            </div>
+            <div class="d-flex justify-content-evenly align-items-center mb-3">
+                <h2 class="text-warning ms-5">Dojo Location: </h2>
+                <p class="me-5">{{ session['location'] }}</p>
+            </div>
+            <div class="d-flex justify-content-evenly align-items-center mb-3">
+                <h2 class="text-warning ms-5">Fav Language: </h2>
+                <p class="me-5">{{ session['language'] }}</p>
+            </div>
+            <div class="d-flex justify-content-evenly align-items-center mb-3">
+                <h2 class="text-warning">Comments: </h2>
+                <p>{{ session['comments'] }}</p>
+            </div>
+            <form action="/clear_session" class="d-flex justify-content-end">
+                <input class="bg-primary w-25 text-white-50" type="submit" value="Go Back">
+            </form>
+    </div>
+</body>
+
+</html>
